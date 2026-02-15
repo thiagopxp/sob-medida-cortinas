@@ -1,0 +1,218 @@
+﻿@using Newtonsoft.Json;
+@using Newtonsoft.Json.Serialization;
+@model SobMedidaCortinas.Web.Models.HomeModel
+@{
+    ViewBag.Title = "Cortinas sob medida";
+    var contractResolver = new DefaultContractResolver
+    {
+        NamingStrategy = new CamelCaseNamingStrategy()
+    };
+}
+@section javascript {
+    <!-- Custom Theme JavaScript -->
+    <script src="/content/js/home.js"></script>
+}
+
+<script>
+    window.home = {
+        cortinas: @Html.Raw(JsonConvert.SerializeObject(Model.Cortinas, new JsonSerializerSettings { ContractResolver = contractResolver })),
+        persianas: @Html.Raw(JsonConvert.SerializeObject(Model.Persianas, new JsonSerializerSettings { ContractResolver = contractResolver })),
+        ideias: @Html.Raw(JsonConvert.SerializeObject(Model.Ideias, new JsonSerializerSettings { ContractResolver = contractResolver }))
+    };
+</script>
+
+
+<section id="missao">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fa fa-heart fa-stack-2x text-primary"></i>
+                    <i class="fa fa-universal-access fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="service-heading">Missão</h4>
+                <p class="text-muted">Atender aos clientes com qualidade e responsabilidade, agregando charme, conforto e bom gosto às cortinas.</p>
+            </div>
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fa fa-asl-interpreting fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="service-heading">Sob Medida</h4>
+                <p class="text-muted">Confecção de cortinas sob medida é a nossa especialidade. Nenhum trabalho é muito pequeno ou muito grande.</p>
+            </div>
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fa fa-asterisk fa-stack-2x text-primary"></i>
+                    <i class="fa fa-clock-o fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="service-heading">Pontualidade</h4>
+                <p class="text-muted">Contando com uma rede de profissionais, conseguimos sempre entregar nossas cortinas no prazo.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Cortinas Grid Section -->
+<section id="cortinas" class="portfolio bg-light-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Tipos de Cortina</h2>
+            </div>
+        </div>
+        <div id="cortinas-container" class="row">
+
+        </div>
+    </div>
+</section>
+
+<!-- Persianas Grid Section -->
+<section id="persianas" class="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Persianas</h2>
+            </div>
+        </div>
+        <div id="persianas-container" class="row">
+
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="sobre-nos" class="bg-light-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Sobre nós</h2>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <p>A empresa Sob Medida Cortinas incorpora os saberes tradicionais da costura artesanal de alta qualidade e totalmente personalizada aos clientes desde os anos 1970, seguindo uma tradição familiar que passa de geração para geração.</p>
+            </div>
+            <div class="col-md-3">
+                <p>Tomar um café junto ao cliente e pensar juntos a melhor solução de decoração é para nós um agradável costume, onde nossos clientes se tornam nossos amigos e parceiros de negócios.</p>
+            </div>
+            <div class="col-md-3">
+                <p>
+                    Atualmente, a empresa conta com uma equipe de profissionais altamente qualificados que, mesmo dentro da competitividade do mercado atual, mantém a qualidade dos produtos de antigamente.
+                </p>
+            </div>
+            <div class="col-md-3">
+                <p>
+                    O tratamento aos clientes se dá de forma personalizada, onde cada detalhe é discutido com profundidade para chegar à solução perfeita para a decoração de sua casa ou de seu escritório.
+                </p>
+            </div>
+        </div>
+        <div class="row" style="padding-top: 150px;">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Linha do tempo</h2>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-image">
+                            <img class="img-circle img-responsive" src="/Content/img/about/1.jpg" alt="">
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>1970-1986</h4>
+                                <h4 class="subheading">Costurando para fora</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Zilda Dionízio Passos começou como costureira trabalhando a partir de casa para ajudar seu marido durante uma época difícl em que o Brasil atravessava.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <img class="img-circle img-responsive" src="/Content/img/about/2.jpg" alt="">
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>1987-2000</h4>
+                                <h4 class="subheading">Costureira de Ouro</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Com uma qualidade impecável, mestre Zilda expandiu seus trabalhos. Comprou a casa vizinha e montou sua oficina na casa ao lado onde passou a gerenciar um time de ouro. Famosa pelo nome "Zilda das cortinas", não existia trabalho muito grande ou pequeno. Querida por todos da região.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image">
+                            <img class="img-circle img-responsive" src="/Content/img/about/3.jpg" alt="">
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>2001-2016</h4>
+                                <h4 class="subheading">De geração para geração</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Fazendo parte da equipe desde o início, Ana Maria Passos seguiu os passos de sua mãe Zilda como costureira especializada em cortinas sob medida. Hoje ela gerencia uma rede de profissionais especializados para um suporte total ao cliente.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <h4>
+                                Próximo trabalho<br />é o seu!
+                            </h4>
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Residencial ou comercial</h4>
+                                <h4 class="subheading">Casas, escritórios e escolas</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Ideias para sua residência ou comércio não vão faltar. Possuímos uma gama enorme de modelos de cortinas e persianas, com tecidos e acessórios de alta qualidade, exclusivos e preços acessíveis para qualquer ambiente. Entregamos sua cortina ou persiana sem você preocupar-se com nada. Aproveite, veja em nosso site alguns modelos disponíveis no mercado. Caso tenha visto algum modelo que em outro lugar, mostre-nos e podemos adaptar ao seu ambiente.</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Idéias Grid Section -->
+<section id="ideias-para-cortinas" class="portfolio bg-light-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Idéias para ambientes</h2>
+            </div>
+        </div>
+        <div id="ideias-container" class="row">
+
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+@Html.Partial("~/views/partials/Contact.cshtml")
+
+<section id="glossario">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Glossário</h2>
+                <h3 class="section-subheading text-muted">Desvendamos os jargões da indústria das cortinas para que você não perca-se mais.</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <ul id="grossario"></ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="modals-container">
+</div>
