@@ -1,0 +1,20 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Warning",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "ReCaptcha": {
+    "SiteKey": "6Lfg8x4TAAAAACWPpPPU6S3-rcMMQgpaPLcuKKCk",
+    "SecretKey": "USE_ENVIRONMENT_VARIABLE_RECAPTCHA__SECRETKEY"
+  },
+  "SendGrid": {
+    "ApiKey": "USE_ENVIRONMENT_VARIABLE_SENDGRID__APIKEY"
+  },
+  "Email": {
+    "FromAddress": "contato@sobmedidacortinas.com.br",
+    "ToAddress": "contato@sobmedidacortinas.com.br",
+    "BccAddresses": ["thiagopxp@gmail.com"]
+  }
+}

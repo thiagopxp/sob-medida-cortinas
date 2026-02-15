@@ -1,6 +1,24 @@
+# Build outputs
 SobMedidaCortinas/SobMedidaCortinas.Web/bin/
 SobMedidaCortinas/SobMedidaCortinas.Web/obj/
+SobMedidaCortinas/SobMedidaCortinas.Web.Core/bin/
+SobMedidaCortinas/SobMedidaCortinas.Web.Core/obj/
 SobMedidaCortinas/packages/
+
+# Node modules
 SobMedidaCortinas/SobMedidaCortinas.Web/node_modules/
+SobMedidaCortinas/SobMedidaCortinas.Web.Core/node_modules/
+
+# IDE files
 SobMedidaCortinas/SobMedidaCortinas.Web/.idea/
 SobMedidaCortinas/.vs/
+.vs/
+
+# Configuration files with secrets (do not commit)
+SobMedidaCortinas/SobMedidaCortinas.Web.Core/appsettings.Development.json
+SobMedidaCortinas/SobMedidaCortinas.Web.Core/appsettings.Production.json
+.env
+
+# Compiled CSS from LESS
+SobMedidaCortinas/SobMedidaCortinas.Web.Core/wwwroot/css/agency.css
+SobMedidaCortinas/SobMedidaCortinas.Web.Core/wwwroot/css/agency.min.css

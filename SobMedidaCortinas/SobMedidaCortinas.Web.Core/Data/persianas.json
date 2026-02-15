@@ -1,0 +1,17 @@
+[
+  {
+    "id": "persiana-rolo",
+    "name": "Persianas Rolô",
+    "description": "As persianas Rolô proporcionam ao seu ambiente leveza, praticidade e harmonia. Podem ser feitas com tecidos translúcidos ou blackout. Quanto ao acabamento, podem ser colocadas na sanca ou cortineiro ou com acabamento da própria persiana."
+  },
+  {
+    "id": "persiana-romana",
+    "name": "Persianas Romana",
+    "description": "As persianas Romana proporcionam ao seu ambiente leveza, praticidade e harmonia. Podem ser feitas com tecidos translúcidos ou blackout. Quanto ao acabamento, podem ser colocadas na sanca ou cortineiro ou com acabamento da própria persiana."
+  },
+  {
+    "id": "persiana-madeira",
+    "name": "Persianas de madeira",
+    "description": ""
+  }
+]
